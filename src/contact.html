@@ -1,60 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact page</title>
-    <link rel="stylesheet" href="css/style.css">
- 
-  </head>
 
-  <body>
-    <header>
-      <img class="logo" src="images/images/360_F_405029055_kMGBx9LXwIxSerlc9eEY4bnBpF5X7yri.jpg" alt="logo">
-      
-      <nav>
-          <span><a href="Home.html">Home</a></span>
-          <span><a href="Aboutme.html">About</a></span>
-          <span><a href="Hobbies.html">Hobbies</a></span>
-          <span><a href="Places.html">places</a></span>
-          <span><a href="Contact.html">Contact</a></span>
-          
-      </nav>    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <a href="#menu" class="menu-icon" id="menu"></a>
+  <header>
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item " href="Home.html">
+            <img class="logo" src="images/images/logo.jpg" alt="logo">
+          </a>
+          <a role="button" class="navbar-burger burger is-hidden-desktop is-hidden-tablet" aria-label="menu" aria-expanded="false"
+          data-target="navbar">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbar" class="navbar-menu is-centered">
+          <div class="navbar-start">
+            <a class="navbar-item" href="Home.html">Home</a>
+            <a class="navbar-item" href="Aboutme.html">About</a>
+            <a class="navbar-item" href="Hobbies.html">Hobbies</a>
+            <a class="navbar-item" href="Places.html">Places</a>
+            <a class="navbar-item" href="Contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
   </header>
 
-
-  <main class="contact">
-    <form action="/submit" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br>
-    
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
-
-        <label for="phonenumber">phoneNo:</label>
-        <input type="text" id="phonenumber" required><br>
-    
-        <label for="message"></label>
-        <textarea id="message" name="message" rows="4" required>Enter your message....</textarea><br>
-
-    
-        <button class="button" type="submit">Submit</button>
+  <main class="section contact  style="background-color: seashell;">
+    <div class="container">
+      <form id="contactForm" action="https://formspree.io/form/your-form-id" method="post">
+       
       </form>
-    
       
-          
-    
+        <div class="field">
+          <label class="label" for="name">Name:</label>
+          <div class="control">
+            <input class="input" type="text" id="name" name="name" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="email">Email:</label>
+          <div class="control">
+            <input class="input" type="email" id="email" name="email" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="phonenumber">Phone No:</label>
+          <div class="control">
+            <input class="input" type="text" id="phonenumber" name="phonenumber" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="message">Message:</label>
+          <div class="control">
+            <textarea class="textarea" id="message" name="message" rows="4" required>Enter your message....</textarea>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control">
+            <button class="button is-primary" type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
   </main>
 
   <footer class="footer">
-    <div class="socials">
-
-      <a href="http://instagram.com/"><img  src="images/images/download.png" alt="instagram icon">@beamliiii</a>
-      <a href="http://telegram.com/"><img  src="images/images/images.png" alt="telegram icon">@BeamlakTH</a>
-      
-  </div>
-
+    <div class="content has-text-centered">
+      <div class="social-media">
+        <a href="https://t.me/BeamlakTH" target="_blank">
+          <span class="icon">
+            <img src="images/images/telegram.jpg" alt="Telegram">
+          </span>
+          BeamlakTH
+        </a>
+        <a href="https://instagram.com/beamliiii?utm_source=qr&igshid=YzU1NGVlODEzOA%3D%3D" target="_blank">
+          <span class="icon">
+            <img src="images/images/instagram.png" alt="Instagram">
+          </span>
+          beamliiii
+        </a>
+      </div>
+      <p class="para">&copy; My social media contacts.</p>
+    </div>
   </footer>
-    
-  </body>
-  </html>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
